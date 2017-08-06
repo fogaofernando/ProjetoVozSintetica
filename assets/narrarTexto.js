@@ -25,7 +25,6 @@ function _narrarTexto(texto,linguagem){
             }
         */
             msg2.lang=linguagem;
-
             if(!bool){
                 player(msg2);
             }
@@ -44,4 +43,17 @@ function _narrarTexto(texto,linguagem){
 
 function _narrandoTexto(){
     return speechSynthesis.pending;
+}
+
+function _voices(){
+
+
+
+    return  speechSynthesis.getVoices().map(function(atuaVoice){
+        
+        return atuaVoice.lang;
+        
+    });
+
+     
 }
