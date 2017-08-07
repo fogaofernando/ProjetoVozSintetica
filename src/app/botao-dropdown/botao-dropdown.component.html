@@ -1,0 +1,12 @@
+<!-- Single button -->
+<div class="btn-group">
+  <button type="button" class="btn dropdown-toggle" [ngClass]="classes()"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{nome}} <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li *ngFor="let item of lista"><a href="#" [ngClass]="classeOpcoes" (click)="eventoClic(item)">{{item}}</a></li>
+  </ul>
+</div>
+    
+    
+

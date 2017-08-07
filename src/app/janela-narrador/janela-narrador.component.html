@@ -1,0 +1,24 @@
+<div class="alert alert-info janela">
+  
+  <h2>Narrar texto</h2>
+  
+  <form>
+    
+    <label>Informe o texto</label>
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button [disabled]="!habilitarBotao" class="btn btn-primary" type="submit" (click)="clickBotao(texto.value)" >
+          Go!
+        </button>
+      </span>
+      <input type="text" class="form-control" placeholder="O que deseja narrar ?" #texto required autofocus>
+      
+    </div>
+    <app-botao-dropdown [classeBotao]="{'btn-info':true}" [nome]="nomeBotaoaLinguagem" [lista]="listaNomesLinguagem" (itemClicado)="alterarLinguagem($event)"></app-botao-dropdown>
+    
+    
+  
+  </form>
+  
+</div>
+
